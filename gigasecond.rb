@@ -6,6 +6,7 @@ end
 
 class GigasecondDate
   ONE_GIGASECOND = 10 ** 9
+  SECONDS_IN_DAY = 86400
 
   def initialize(start_date)
     @start_date = start_date
@@ -19,6 +20,6 @@ class GigasecondDate
   attr_reader :start_date
 
   def secs_to_days(seconds)
-    (seconds / 86400.0).floor
+    seconds / SECONDS_IN_DAY
   end
 end
